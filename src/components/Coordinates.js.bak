@@ -1,0 +1,38 @@
+const Coordinates = () => {
+  return (
+    <div className="coordinates-box">
+      <ul className="coordinates">
+        <li className="list-item">
+          <ul>IP ADDRESS
+            <li className="list-header">IP ADDRESS</li>
+            <li></li>
+          </ul>
+        </li>
+
+        <li>
+          <ul>
+            <li className="list-header">LOCATION</li>
+            <li></li>
+          </ul>
+        </li>
+
+        <li>
+          <ul>
+            <li className="list-header"> TIMEZONE UTC</li>
+            <li></li>
+          </ul>
+          {/*add offset value dynamically using the API*/}
+        </li>
+
+        <li>
+          <ul>
+            <li className="list-header">ISP </li>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default Coordinates;
