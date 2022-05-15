@@ -1,9 +1,8 @@
-import React from 'react'
 
-const IPMAP = () => {
+const IpMap = () => {
   return (
-    <div className="map-main">IPMAP</div>
+    <div className="map-main">IpMap</div>
   )
 }
 
-export default IPMAP
+export default IpMap
