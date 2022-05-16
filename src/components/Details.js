@@ -1,7 +1,7 @@
 const Details = ({location}) => {
   return (
-    <div className="coordinates-box">
-      <div className="coordinates">
+    <div className="details-box">
+      <div className="details">
           <ul>
             <li className="list-title">IP ADDRESS</li>
             <li className="list-item list-border">{location.ip}</li>

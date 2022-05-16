@@ -11,6 +11,7 @@ const Header = ({ children, address, setAddress,}) => {
           className="ip-address-box"
           placeholder="Search of any IP address or domain"
           value={address}
+          required
           onChange={(e) =>{
             const {value} =e.target
             console.log(`value: `,value)
