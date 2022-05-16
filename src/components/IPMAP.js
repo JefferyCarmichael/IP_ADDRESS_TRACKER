@@ -1,7 +1,9 @@
 import { MapContainer, TileLayer, Marker,Popup ,useMap } from 'react-leaflet'
 
-const IpMap = () => {
-  const position = [51.505, -0.09]
+const IpMap = ({location}) => {
+  const {lat, lng} = location
+
+  const position = [lat,lng]
   return (
 
     <MapContainer center={position} zoom={13} scrollWheelZoom={false} id="map">
