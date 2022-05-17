@@ -5,7 +5,7 @@ const Header = ({ children, address, setAddress, setLocation,location }) => {
     e.preventDefault();
     console.log(`address: `, address);
     fetch(
-      `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.REACT_APP_KEY}&ipAddress=8.8.8.8https://geo.ipify.org/api/v2/country,city?apiKey=at_pBf27CHDSGjAmSIIz4bYnuSCQ5oVm&ipAddress=${address}`
+      `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.REACT_APP_KEY}&domain=${address}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -23,7 +23,6 @@ const Header = ({ children, address, setAddress, setLocation,location }) => {
         })
         .catch((error)=>console.log(error.message))
         console.log(`location next:`,location)
-
       });   
   };
 
