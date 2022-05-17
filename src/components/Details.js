@@ -1,6 +1,7 @@
 const Details = ({location}) => {
   return (
-    <div className="details-box">
+    <summary className="details-box" >
+    {/* Displays info from Ipify API*/}
       <div className="details">
           <ul>
             <li className="list-title">IP ADDRESS</li>
@@ -9,21 +10,20 @@ const Details = ({location}) => {
 
           <ul>
             <li className="list-title">LOCATION</li>
-            <li className="list-item list-border">{location.place}</li>
+            <li className="list-item list-border">{location.city}, {location.region}, {location.postalCode}</li>
           </ul>
 
           <ul>
             <li className="list-title"> TIMEZONE</li>
             <li className="list-item list-border">UTC{location.timezone}</li>
           </ul>
-          {/*add offset value dynamically using the API*/}
 
           <ul>
             <li className="list-title">ISP </li>
             <li className="list-item">{location.isp}</li>
           </ul>
       </div>
-    </div>
+    </summary>
   );
 };
 
