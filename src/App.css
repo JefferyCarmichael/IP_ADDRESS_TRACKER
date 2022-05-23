@@ -1,14 +1,16 @@
 :root {
-  --lt-gray:hsl(0, 0%, 83%);
+  --lt-gray:hsl(0, 0%, 92%);
   --dark-gray: hsl(0, 0%, 59%);
   --very-dark-gray: hsl(0, 0%, 17%);
   --blue: hsl(228, 45%, 44%);
+  font-size: 1.35vw;
 }
 
 .leaflet-marker-icon {
   display: inline-block;
   content: url(./images/icon-location.svg);
-  width: 2.55em !important;
+  width: 3.75em !important;
+  height: 4.75em !important;
 }
 
 
@@ -30,6 +32,9 @@
   flex-direction: column;
   align-items: center;
   background-image: url("./images/pattern-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   position: relative;
   z-index: 25;
 
@@ -41,7 +46,7 @@
 }
 
 .title {
-  color: lightgray;
+  color: var(--lt-gray);
   font-size: 1.875rem;
 }
 
@@ -56,6 +61,11 @@
   height: 8.125rem;
   border: grey solid 1px;
   z-index: 20;
+  box-shadow: 4px 6px 20px 1px rgba(0, 0, 0, 0.404);
+}
+
+.leaflet-control-zoom.leaflet-bar.leaflet-control{
+  box-shadow: 4px 6px 10px 1px rgba(0, 0, 0, 0.253);
 }
 .details {
   display: flex;
@@ -79,6 +89,7 @@
   border-bottom-right-radius: .625rem;
   background-color: var(--very-dark-gray);
 }
+
 
 .list-title {
   font-weight: 500;
@@ -116,3 +127,93 @@
   position: relative;
   z-index:10 ;
  }
+
+
+ @media screen and (max-width:1024px ) {
+   :root{
+    font-size: 13px;
+   }
+   .header {
+    height: 20vh;
+   }
+   #map{
+     height: 79vh;
+   }
+ }
+
+ @media screen and (max-width:820px ) {
+  :root{
+   font-size: 11px;
+  }
+  
+}
+
+@media screen and (max-device-width: 480px) and 
+
+( -webkit-max-device-pixel-ratio: 3),
+( max--moz-device-pixel-ratio: 3),
+( -o-max-device-pixel-ratio: 3/1),
+( max-device-pixel-ratio: 3) and
+( max-resolution: 192dpi) and
+( max-resolution: 2dppx)
+{
+ 
+  .details { 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .details-box {
+    position: relative;
+    bottom: -28px;
+    width: 25rem;
+    padding: 1.5rem;
+    height: 32rem;
+    border-radius: 1.625rem;
+    font-size: 14px;
+
+  }
+
+  .ip-address-box {
+    width: 21rem;
+    height: 4.125rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    font-size: 1.15rem;
+    padding: 10px;
+    border: 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      px;
+  }
+  .ip-button {
+    height: 4.125rem;
+    width: 4.125rem;
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    border: 0px;
+  }
+  
+  .header {
+    height: 250px;
+    justify-items: space-between;
+   }
+
+   #map{
+     height: 68vh;
+   }
+
+   .list-border {
+    border-right: 0px;
+  }
+  .list-item{
+    font-size: 15px;
+    padding: 0;
+    width: 20rem;
+
+  }
+  .list-title{
+    margin-top: 10px;
+  }
+  .leaflet-control-zoom{
+    display: none;
+  }
+}

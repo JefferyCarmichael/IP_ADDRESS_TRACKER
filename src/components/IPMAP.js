@@ -12,16 +12,16 @@ const IpMap = ({ location }) => {
 
   let position = [lat, lng];
   return (
-    <MapContainer center={position} zoom={13} scrollWheelZoom={false} id="map">
+    <MapContainer center={position} zoom={17 } scrollWheelZoom={false} id="map">
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <MyComponent center={position} zoom={13} />
+      <MyComponent center={position} zoom={17} />
 
       <Marker position={position}>
         <Popup>
-          Lattitude: {lat} <br /> Longitude: {lng}
+       <b>Lattitude:</b>  {lat} <br /> <b>Longitude:</b> {lng}
         </Popup>
       </Marker>
     </MapContainer>
